@@ -16,46 +16,21 @@
  *  N is an integer within the range [1..2,147,483,647].
  */
 
-const solution1 = num => {
-    // if ( num % 2 === 0 ) return 0;
-    const gapArr = [];
-    let gapCnt = 0;
-    let isFirst = true;
-    let isSwitch = false;
-
-debugger;
-    while ( num != 1 ) {
-        debugger
-        let rest = num % 2;
-        
-        if ( rest === 1 && isFirst === false ) {
-             gapArr.push(gapCnt); 
-             gapCnt = 0;
-        }
-        if ( rest === 0 ) gapCnt++;
-        if ( isFirst ) isFirst = false;
-        num = parseInt(num / 2);
-    }
-
-    if ( gapArr.length !== 0 && gapCnt !== 0 ) gapArr.push(gapCnt);
+const solution = num => {
     
+    let gapArr = (num).toString(2)
+                      .split(1)
+                      .slice(0,-1)
+                      .reduce( (acc, cur) => {
+                          if ( cur.length !== 0 ) acc.push(cur.length);
+                          return acc;
+                        },[]);
+
     return gapArr.length === 0 ? 0 : Math.max(...gapArr);
 }
-const solution = num => {
-    // const binaryStr = num.toString(2);
-    // const binaryStr = (num).toString(2).split(1).slice(0,-1);
-    
-    // console.log(`num: ${num} => numbinary: ${binaryStr} `);
 
-    let gapArr = (num).toString(2).split(1).slice(0,-1).reduce((acc, cur)=>{
-        if ( cur.length !== 0 ) acc.push(cur.length);
-        return acc;
-    },[]);
-    // if ( gapArr.length === 0 ) return 0;
-
-    return Math.max(...gapArr);
-}
 (() => {
+    /** Test */
     console.log(solution(32)); //0
     console.log(solution(1041)); // 5
     console.log(solution(15)); // 0
