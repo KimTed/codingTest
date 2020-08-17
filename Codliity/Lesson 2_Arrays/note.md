@@ -4,4 +4,5 @@
   
 > TODO list
 > - 70 이상으로 만들기
-> >결과 : ![첫번째 피드백.png](./result1.png)
+> <br> 결과: <br> <img src = "./result1.png" width="80px">
+
