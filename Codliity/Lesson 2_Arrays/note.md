@@ -1,6 +1,8 @@
 # 놓친부분
 - Array.prototype.slice
 - Array.prototype.reduce
+- Array.prototype.concat
+- Array.prototype.join
 - String.prototype.repeat
 - Array.from
 ---
