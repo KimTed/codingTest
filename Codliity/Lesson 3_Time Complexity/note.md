@@ -17,3 +17,8 @@
 - [TapeEquilibrium]
    - 100점 만들기<br> 결과: 
    <br><img src = "./[TapeEquilibrium]result1.png" width="80px">
+---
+### 참고 URL
+- 배열에서 최소값 갖고 오기
+  Math.min(...Array)
+  > https://medium.com/@vladbezden/how-to-get-min-or-max-of-an-array-in-javascript-1c264ec6e1aa
