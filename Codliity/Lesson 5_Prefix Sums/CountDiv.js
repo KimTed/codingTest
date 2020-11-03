@@ -26,9 +26,6 @@ const solution = (a, b, k) => {
     return result;
     */
 
-    let end = b;
-    let start = a;
-
     if ( a === b ) {
         if (   a === k 
             || a === 0
@@ -36,7 +33,6 @@ const solution = (a, b, k) => {
         return 0;
     }
 
-    console.log(`parseInt(b/k): ${parseInt(b/k)}  , parseInt(a/k): ${parseInt(a/k)}`)
     return parseInt(b/k) - (a%k===0 ? parseInt(a/k)-1 : parseInt(a/k));
 }
 
